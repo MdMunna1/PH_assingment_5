@@ -20,23 +20,41 @@
       }
       html,
       body {
-        height: 100%;
+        height: auto;
         width: 100%;
       }
     </style>
   </head>
   <body>
-    <header class="w-full sticky top-0 backdrop-blur-md">
-      <nav class="bg-red-50 text-xs sm:text-lg  h-20 flex justify-around items-center  pb-4">
-        <a class="btn font-semibold text-xs sm:text-lg bg-lime-300" href="">Blog</a>
+    <header class="w-full pb-[1px] sticky top-0 backdrop-blur-md">
+      <nav
+        class="bg-red-50 text-xs sm:text-lg h-20 flex justify-around items-center pb-4"
+      >
+        <button
+          id="blog"
+          class="btn font-semibold text-xs sm:text-lg bg-lime-300"
+        >
+          Blog
+        </button>
+        <button
+          id="home"
+          class="btn hidden font-semibold text-xs sm:text-lg bg-lime-300"
+        >
+          Home
+        </button>
         <div class="flex font-bold gap-2">
-          <img class="sm:h-7 h-4" src="./assets/logo.png" alt="" />Donate Bangladesh
+          <img class="sm:h-7 h-4" src="./assets/logo.png" alt="" />Donate
+          Bangladesh
         </div>
         <div class="flex font-bold text-gray-600 gap-1">
-          <img class="h-4 sm:h-7" src="./assets/coin.png" alt="" /><span id="main-balance">98600</span>
+          <img class="h-4 sm:h-7" src="./assets/coin.png" alt="" /><span
+            id="main-balance"
+            >98600</span
+          >
           BDT
         </div>
       </nav>
+      <!-- nevber end -->
       <!-- button section -->
       <section class="gap-4 mt-10 mb-6 w-full flex justify-center">
         <button
@@ -50,13 +68,81 @@
         </button>
       </section>
     </header>
+    <!-- MCQ section -->
+    <section id="mcq" class="w-11/12 hidden mx-auto">
+      <div class="join join-vertical w-full">
+        <h1 class="font-bold text-2xl py-5">INPOTENT MCQ</h1>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            WHATE IS DOM FULL FROM
+          </div>
+          <div class="collapse-content">
+            <p>Document Object Model (DOM)</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            What is the structure of the DOM often compared to?
+          </div>
+          <div class="collapse-content">
+            <p>A tree structure</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            Which of the following can you NOT do with the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>Execute SQL queries</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            In DOM, which of the following represents the root of the document?
+          </div>
+          <div class="collapse-content">
+            <p>HTML</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            Which method is used to remove an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>removeChild()</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- modal -->
+<dialog id="my_modal_4" class="modal">
+  <div class="modal-box w-11/12 flex flex-col items-center max-w-80">
+    <h3 class="text-2xl font-bold text-center py-2">CONGRATES!</h3>
+    <img class="text-center" src="./assets/coin.png" alt="">
+    <p class="py-4 text-center">You Have Donated For Humandkind</p>
+    <h4 class="font-bold">Successfully</h4>
+    <div class="modal-action">
+      <form method="dialog" >
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close </button>
+      </form>
+    </div>
+  </div>
+</dialog>
+  <!-- modal end -->
+    
 
-    <!-- nevber end -->
-    <main id="main" class="w-11/12 mx-auto ">
+    <main id="main" class="w-11/12 mx-auto">
       <!-- donation section -->
       <section
         class="gap-6 my-8 p-5 h-78 grid sm:grid-cols-2 shadow-lg rounded-md"
       >
+       
         <!-- img -->
         <div>
           <img src="./assets/noakhali.png" alt="" />
@@ -84,10 +170,14 @@
             name=""
             id="noakhali-inp"
           />
-          <button id="noakhali-btn" class="btn add-btn bg-lime-400 font-semibold">Donate Now</button>
+          <button
+            id="noakhali-btn"
+            class="btn add-btn bg-lime-400 font-semibold"
+          >
+            Donate Now
+          </button>
         </div>
       </section>
-      <!-- 22222222 -->
       <section
         class="gap-4 my-8 p-5 h-78 grid sm:grid-cols-2 shadow-lg rounded-md"
       >
@@ -118,10 +208,11 @@
             name=""
             id="feni-inp"
           />
-          <button id="feni-btn" class="btn add-btn bg-lime-400 font-semibold">Donate Now</button>
+          <button id="feni-btn" class="btn add-btn bg-lime-400 font-semibold">
+            Donate Now
+          </button>
         </div>
       </section>
-      <!-- 33333 -->
       <section
         class="gap-4 my-8 p-5 h-78 grid sm:grid-cols-2 shadow-lg rounded-md"
       >
@@ -152,10 +243,11 @@
             name=""
             id="quota-inp"
           />
-          <button id="quota-btn" class="btn add-btn bg-lime-400 font-semibold">Donate Now</button>
+          <button id="quota-btn" class="btn add-btn bg-lime-400 font-semibold">
+            Donate Now
+          </button>
         </div>
       </section>
-      <!-- 444 -->
       <section
         class="gap-4 my-8 p-5 h-78 grid sm:grid-cols-2 shadow-lg rounded-md"
       >
@@ -190,18 +282,20 @@
             name=""
             id="bangladesh-inp"
           />
-          <button id="bangladesh-btn" class="btn add-btn bg-lime-400 font-semibold">Donate Now</button>
+          <button
+            id="bangladesh-btn"
+            class="btn add-btn bg-lime-400 font-semibold"
+          >
+            Donate Now
+          </button>
         </div>
       </section>
     </main>
-    <section id="history-section" class="w-8/12 mx-auto flex flex-col gap-5">
-      <div class="shadow-lg p-2"><h1>munna</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, eos.</p></div>
-    
-
-    </section>
+    <section
+      id="history-section"
+      class="w-8/12 mx-auto flex flex-col gap-5 hidden"
+    ></section>
 
     <script src="app.js"></script>
-    <!-- <script src="scrip.js"></script> -->
   </body>
 </html>

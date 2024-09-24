@@ -24,7 +24,7 @@ noakhliBtn.addEventListener("click", function () {
   let nowBalence = inputValue + agerTaka;
   document.getElementById("main-balance").innerText = nowMainBalance;
   document.getElementById("noakhali-taka").innerText = nowBalence;
-  // history 
+  // history
   let historySection = document.getElementById("history-section");
   let div = document.createElement("div");
   let h1 = document.createElement("h1");
@@ -32,10 +32,11 @@ noakhliBtn.addEventListener("click", function () {
   h1.innerText = `${inputValue} Donate for Noakhali Flood people Noakhali,Bangladesh`;
   div.appendChild(h1);
   let p = document.createElement("p");
-  p.innerText = "new date()";
+  p.innerText = new Date();
   div.appendChild(p);
 
   historySection.appendChild(div);
+  my_modal_4.showModal();
 });
 // feni
 feniBtn.addEventListener("click", function () {
@@ -56,13 +57,14 @@ feniBtn.addEventListener("click", function () {
   let div = document.createElement("div");
   let h1 = document.createElement("h1");
   h1.classList.add("font-bold");
-  h1.innerText = `${inputValue}Taka is Donated for Flood Relief in Feni,Bangladesh`;
+  h1.innerText = `${inputValue} Taka is Donated for Flood Relief in Feni,Bangladesh`;
   div.appendChild(h1);
   let p = document.createElement("p");
-  p.innerText = "new date()";
+  p.innerText = new Date();
   div.appendChild(p);
 
   historySection.appendChild(div);
+  my_modal_4.showModal();
 });
 // quota
 quotaBtn.addEventListener("click", function () {
@@ -86,10 +88,11 @@ quotaBtn.addEventListener("click", function () {
   h1.innerText = `${inputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`;
   div.appendChild(h1);
   let p = document.createElement("p");
-  p.innerText = "new date()";
+  p.innerText = new Date();
   div.appendChild(p);
 
   historySection.appendChild(div);
+  my_modal_4.showModal();
 });
 // bangladesh
 bangladeshBtn.addEventListener("click", function () {
@@ -112,18 +115,17 @@ bangladeshBtn.addEventListener("click", function () {
   h1.innerText = `${inputValue} Taka is donated for Bangladeshi the flood people`;
   div.appendChild(h1);
   let p = document.createElement("p");
-  p.innerText = "new date()";
+  p.innerText = new Date();
   div.appendChild(p);
-
   historySection.appendChild(div);
+  my_modal_4.showModal();
 });
 
-// 
-// 
-// 
-// 
-// 
-
+//
+//
+//
+//
+//
 
 // button  donation history
 let donation = document.getElementById("donation");
@@ -133,10 +135,38 @@ history.addEventListener("click", function () {
   donation.classList.remove("bg-lime-400", "font-semibold");
   let main = document.getElementById("main");
   main.classList.add("hidden");
+  let historySection = document.getElementById("history-section");
+  historySection.classList.remove("hidden");
 });
 donation.addEventListener("click", function () {
   history.classList.remove("bg-lime-400", "font-semibold");
   donation.classList.add("bg-lime-400", "font-semibold");
   let main = document.getElementById("main");
   main.classList.remove("hidden");
+  let historySection = document.getElementById("history-section");
+  historySection.classList.add("hidden");
 });
+
+//
+//
+//
+//
+//
+//
+const blogBtn = document.getElementById("blog");
+const homeBtn = document.getElementById("home");
+const mcq = document.getElementById("mcq");
+const main = document.getElementById("main");
+blogBtn.addEventListener("click", function () {
+  homeBtn.classList.remove("hidden");
+  blogBtn.classList.add("hidden");
+  main.classList.add("hidden");
+  mcq.classList.remove("hidden");
+});
+homeBtn.addEventListener("click", function () {
+  homeBtn.classList.add("hidden");
+  blogBtn.classList.remove("hidden");
+  main.classList.remove("hidden");
+  mcq.classList.add("hidden");
+});
+console.log(main);
