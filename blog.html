@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="w-full pb-[1px] sticky top-0 backdrop-blur-md">
+        <nav
+          class="bg-red-50 text-xs sm:text-lg h-20 flex justify-around items-center pb-4"
+        >
+          <a
+            id="home" href="index.html"
+            class="btn font-semibold text-xs sm:text-lg bg-lime-300"
+          >
+            Home
+          </a>
+          <div class="flex font-bold gap-2">
+            <img class="sm:h-7 h-4" src="./assets/logo.png" alt="" />Donate
+            Bangladesh
+          </div>
+          <div class="flex font-bold text-gray-600 gap-1">
+            <img class="h-4 sm:h-7" src="./assets/coin.png" alt="" /><span
+              id="main-balance"
+              >98600</span
+            >
+            BDT
+          </div>
+        </nav>
+        <!-- nevber end -->
+        <!-- button section -->
+        <section class="gap-4 mt-10 mb-6 w-full flex justify-center">
+          <button
+            id="donation"
+            class="py-2 px-4 rounded-md shadow-md bg-lime-400 font-semibold"
+          >
+            Donation
+          </button>
+          <button id="history" class="py-2 px-4 rounded-md shadow-md">
+            History
+          </button>
+        </section>
+      </header>
+    <!--  -->
+    <section id="mcq" class="w-11/12 hidden mx-auto"></section>
+        <div class="join join-vertical w-full">
+          <h1 class="font-bold text-2xl py-5">INPOTENT MCQ</h1>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+                Which method is used to find an element by its ID in the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>document.getElementById()</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              What is the structure of the DOM often compared to?
+            </div>
+            <div class="collapse-content">
+              <p>A tree structure</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Which of the following can you NOT do with the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>Execute SQL queries</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              In DOM, which of the following represents the root of the document?
+            </div>
+            <div class="collapse-content">
+              <p>HTML</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Which method is used to remove an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>removeChild()</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>

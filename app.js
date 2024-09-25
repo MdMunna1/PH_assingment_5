@@ -2,11 +2,11 @@ const noakhliBtn = document.getElementById("noakhali-btn");
 const feniBtn = document.getElementById("feni-btn");
 const quotaBtn = document.getElementById("quota-btn");
 const bangladeshBtn = document.getElementById("bangladesh-btn");
-// ....function
+// ....function input value to number
 function inputToString(id) {
   return parseFloat(document.getElementById(id).value);
 }
-// function
+// function innerText to number
 function innerTextTonumber(id) {
   return parseFloat(document.getElementById(id).innerText);
 }
@@ -15,7 +15,12 @@ noakhliBtn.addEventListener("click", function () {
   let mailBalance = innerTextTonumber("main-balance");
   let inputValue = inputToString("noakhali-inp");
   let agerTaka = innerTextTonumber("noakhali-taka");
-  if (inputValue < 0 || isNaN(inputValue) || Array.isArray(inputValue)) {
+  if (
+    mailBalance < inputValue ||
+    inputValue < 0 ||
+    isNaN(inputValue) ||
+    Array.isArray(inputValue)
+  ) {
     alert("invalit input please input valid number");
     return;
   }
@@ -43,7 +48,12 @@ feniBtn.addEventListener("click", function () {
   let mailBalance = innerTextTonumber("main-balance");
   let inputValue = inputToString("feni-inp");
   let agerTaka = innerTextTonumber("fani-taka");
-  if (inputValue < 0 || isNaN(inputValue) || Array.isArray(inputValue)) {
+  if (
+    mailBalance < inputValue ||
+    inputValue < 0 ||
+    isNaN(inputValue) ||
+    Array.isArray(inputValue)
+  ) {
     alert("invalit input please input valid number");
     return;
   }
@@ -71,7 +81,12 @@ quotaBtn.addEventListener("click", function () {
   let mailBalance = innerTextTonumber("main-balance");
   let inputValue = inputToString("quota-inp");
   let agerTaka = innerTextTonumber("quota-taka");
-  if (inputValue < 0 || isNaN(inputValue) || Array.isArray(inputValue)) {
+  if (
+    mailBalance < inputValue ||
+    inputValue < 0 ||
+    isNaN(inputValue) ||
+    Array.isArray(inputValue)
+  ) {
     alert("invalit input please input valid number");
     return;
   }
@@ -99,7 +114,12 @@ bangladeshBtn.addEventListener("click", function () {
   let mailBalance = innerTextTonumber("main-balance");
   let inputValue = inputToString("bangladesh-inp");
   let agerTaka = innerTextTonumber("village-taka");
-  if (inputValue < 0 || isNaN(inputValue) || Array.isArray(inputValue)) {
+  if (
+    mailBalance < inputValue ||
+    inputValue < 0 ||
+    isNaN(inputValue) ||
+    Array.isArray(inputValue)
+  ) {
     alert("invalit input please input valid number");
     return;
   }
@@ -121,13 +141,7 @@ bangladeshBtn.addEventListener("click", function () {
   my_modal_4.showModal();
 });
 
-//
-//
-//
-//
-//
-
-// button  donation history
+//donation button and history button
 let donation = document.getElementById("donation");
 let history = document.getElementById("history");
 history.addEventListener("click", function () {
@@ -146,27 +160,3 @@ donation.addEventListener("click", function () {
   let historySection = document.getElementById("history-section");
   historySection.classList.add("hidden");
 });
-
-//
-//
-//
-//
-//
-//
-const blogBtn = document.getElementById("blog");
-const homeBtn = document.getElementById("home");
-const mcq = document.getElementById("mcq");
-const main = document.getElementById("main");
-blogBtn.addEventListener("click", function () {
-  homeBtn.classList.remove("hidden");
-  blogBtn.classList.add("hidden");
-  main.classList.add("hidden");
-  mcq.classList.remove("hidden");
-});
-homeBtn.addEventListener("click", function () {
-  homeBtn.classList.add("hidden");
-  blogBtn.classList.remove("hidden");
-  main.classList.remove("hidden");
-  mcq.classList.add("hidden");
-});
-console.log(main);
