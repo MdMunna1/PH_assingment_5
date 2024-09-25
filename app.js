@@ -32,8 +32,9 @@ noakhliBtn.addEventListener("click", function () {
   // history
   let historySection = document.getElementById("history-section");
   let div = document.createElement("div");
+  div.classList.add("shadow-md","p-2")
   let h1 = document.createElement("h1");
-  h1.classList.add("font-bold");
+  h1.classList.add("font-bold","py-2");
   h1.innerText = `${inputValue} Donate for Noakhali Flood people Noakhali,Bangladesh`;
   div.appendChild(h1);
   let p = document.createElement("p");
@@ -65,8 +66,9 @@ feniBtn.addEventListener("click", function () {
   // history
   let historySection = document.getElementById("history-section");
   let div = document.createElement("div");
+  div.classList.add("shadow-md","p-2")
   let h1 = document.createElement("h1");
-  h1.classList.add("font-bold");
+  h1.classList.add("font-bold","py-2");
   h1.innerText = `${inputValue} Taka is Donated for Flood Relief in Feni,Bangladesh`;
   div.appendChild(h1);
   let p = document.createElement("p");
@@ -98,8 +100,9 @@ quotaBtn.addEventListener("click", function () {
   // history section
   let historySection = document.getElementById("history-section");
   let div = document.createElement("div");
+  div.classList.add("shadow-md","p-2")
   let h1 = document.createElement("h1");
-  h1.classList.add("font-bold");
+  h1.classList.add("font-bold","py-2");
   h1.innerText = `${inputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`;
   div.appendChild(h1);
   let p = document.createElement("p");
@@ -130,8 +133,9 @@ bangladeshBtn.addEventListener("click", function () {
   // history section
   let historySection = document.getElementById("history-section");
   let div = document.createElement("div");
+  div.classList.add("shadow-md","p-2")
   let h1 = document.createElement("h1");
-  h1.classList.add("font-bold");
+  h1.classList.add("font-bold","py-2");
   h1.innerText = `${inputValue} Taka is donated for Bangladeshi the flood people`;
   div.appendChild(h1);
   let p = document.createElement("p");
