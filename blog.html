@@ -11,9 +11,21 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      html,body{
+        height: auto;
+        width: 100%;
+  
+      }
+    </style>
   </head>
   <body>
-    <header class="w-full pb-[1px] sticky top-0 backdrop-blur-md">
+    <header class="w-full z-10 pb-[1px] sticky top-0 backdrop-blur-md">
         <nav
           class="bg-red-50 text-xs sm:text-lg h-20 flex justify-around items-center pb-4"
         >
@@ -50,9 +62,9 @@
         </section>
       </header>
     <!--mcq  -->
-    <section id="mcq" class="w-11/12 hidden mx-auto"></section>
+    <section id="mcq" class="w-10/12 mx-auto"> 
         <div class="join join-vertical w-full">
-          <h1 class="font-bold text-2xl py-5 p-4">INPOTENT MCQ</h1>
+          <h1 class="font-bold text-3xl py-5 p-2">INPOTENT MCQ</h1>
           <div class="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" checked="checked" />
             <div class="collapse-title text-xl font-medium">
